@@ -8,13 +8,13 @@ import { Layout } from "antd";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
-import UploadBook from "./components/functions/upload_file";
-import SignUp from "./components/functions/sign_up";
-import SignIn from "./components/functions/sign_in";
-import Detail from "./components/functions/detail";
-import About from "./components/functions/about";
-import Profile from "./components/functions/profile";
-import Guide from "./components/functions/guide"
+import UploadBook from "./components/views/upload_file";
+import SignUp from "./components/views/sign_up";
+import SignIn from "./components/views/sign_in";
+import Detail from "./components/views/detail";
+import About from "./components/views/about";
+import Profile from "./components/views/profile";
+import Guide from "./components/views/guide"
 import config from "./config";
 const axios = require("axios").default;
 

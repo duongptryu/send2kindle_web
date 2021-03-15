@@ -1,7 +1,7 @@
 import React from "react";
-import SearchBook from "./functions/search_book";
-import Result from "./functions/result";
-import Detail from "./functions/detail";
+import SearchBook from "./views/search_book";
+import Result from "./views/result";
+import Detail from "./views/detail";
 
 
 class Body extends React.Component {
