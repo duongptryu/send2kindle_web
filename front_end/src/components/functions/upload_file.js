@@ -19,8 +19,7 @@ class UploadBook extends React.Component {
     this.handleCancel = this.handleCancel.bind(this);
     this.handleClear = this.handleClear.bind(this);
     this.getButton = this.getButton.bind(this);
-    this.handleUpload = this.handleUpload.bind(this)
-
+    this.handleUpload = this.handleUpload.bind(this);
   }
 
   getButton() {
@@ -55,7 +54,6 @@ class UploadBook extends React.Component {
     });
   }
 
-
   handleCancel = () => {
     this.setState({
       visible1: false,
@@ -88,7 +86,7 @@ class UploadBook extends React.Component {
     }
     const { fileList } = this.state;
     const formData = new FormData();
-    formData.append("kindle_mail", kindle_mail)
+    formData.append("kindle_mail", kindle_mail);
     fileList.forEach((file) => {
       formData.append("file", file);
     });
@@ -116,9 +114,9 @@ class UploadBook extends React.Component {
           visible3: false,
           pop_loading: false,
         });
-        if(err.response.status === 422){
-          alert("Fail request, please try again later")
-          return false
+        if (err.response.status === 422) {
+          alert("Fail request, please try again later");
+          return false;
         }
         message.error(err.response.data.detail);
       });
@@ -155,7 +153,7 @@ class UploadBook extends React.Component {
       fileList,
     };
     return (
-      <div style={{ height: "74vh"}}>
+      <div style={{ height: "74vh" }}>
         {/* ===================================================================== */}
         <div>
           <Modal

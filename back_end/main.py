@@ -198,6 +198,8 @@ def upload_file(background_tasks: BackgroundTasks, file: UploadFile = File(...),
     except Exception as Error:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(Error))
 
+
+
 @app.post("/user/update-kindle-mail")
 def update_k_m(info: UserUpdateKindleMail,  token: str = Depends(oauth2_scheme)):
     try:
@@ -220,6 +222,8 @@ def update_k_m(info: UserUpdateKindleMail,  token: str = Depends(oauth2_scheme))
             return user
     except Exception as Error:
         raise HTTPException(status_code=Error.status_code, detail = Error.detail)
+
+
 
 @app.post("/user/update-password")
 def update_p(info: UserUpdatePassword, token: str = Depends(oauth2_scheme)):
