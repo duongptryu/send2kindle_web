@@ -7,8 +7,8 @@ from email import encoders
 import os
 import config
 
-fromaddr = "send2kindle.ncsc@gmail.com"
-password = "!@#123456789aA"
+fromaddr = ""
+password = ""
 
    
 msg = MIMEMultipart() 
