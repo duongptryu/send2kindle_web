@@ -28,7 +28,7 @@ class SignIn extends React.Component {
 
     axios({
       method: "POST",
-      url: config.API_URL + "sign-in",
+      url: config.API_URL + config.API_VR + "sign-in",
       mode: "cors",
       credentials: "include",
       headers: {

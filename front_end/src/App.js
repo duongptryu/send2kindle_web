@@ -40,7 +40,7 @@ class App extends React.Component {
     }
     axios({
       method: "GET",
-      url: config.API_URL + "users/me",
+      url: config.API_URL + config.API_VR +  "users/me",
       credentials: true,
       mode: "cors",
       headers: {

@@ -5,7 +5,7 @@ import {
   ArrowRightOutlined,
   BarsOutlined,
 } from "@ant-design/icons";
-import "../../public/css/search_book.css";
+import "../../assets/css/search_book.css";
 import axios from "axios";
 import config from "../../config";
 
@@ -54,7 +54,7 @@ class SearchBook extends React.Component {
 
       axios({
         method: "GET",
-        url: config.API_URL + "search/" + req,
+        url: config.API_URL + config.API_VR + "search/" + req,
       })
         .then((res) => {
           this.props.searchHandle(res.data.result, data.title);

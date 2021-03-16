@@ -137,7 +137,7 @@ class Result extends React.Component {
     axios({
       method: "GET",
       url:
-        config.API_URL + "get-book/" + book_id + "?kindle_mail=" + kindle_mail,
+        config.API_URL + config.API_VR + "get-book/" + book_id + "?kindle_mail=" + kindle_mail,
     })
       .then((res) => {
         alert(res.data.detail)

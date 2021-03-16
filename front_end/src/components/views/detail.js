@@ -28,7 +28,7 @@ class Detail extends React.Component {
     const book_id = book_mirror.split("/").pop();
     axios({
       method: "GET",
-      url: config.API_URL + "detail/" + book_id,
+      url: config.API_URL + config.API_VR + "detail/" + book_id,
     }).then((res) => {
       if (document.querySelector("#series")) {
         document.querySelector("#series").innerHTML = res.data.series;
@@ -104,7 +104,7 @@ class Detail extends React.Component {
     axios({
       method: "GET",
       url:
-        config.API_URL + "get-book/" + book_id + "?kindle_mail=" + kindle_mail,
+        config.API_URL + config.API_VR + "get-book/" + book_id + "?kindle_mail=" + kindle_mail,
     })
       .then((res) => {
         alert(res.data.detail);

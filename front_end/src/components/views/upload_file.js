@@ -92,7 +92,7 @@ class UploadBook extends React.Component {
     });
     // You can use any AJAX library you like
     axios({
-      url: config.API_URL + "upload-file",
+      url: config.API_URL + config.API_VR + "upload-file",
       method: "post",
       processData: false,
       data: formData,

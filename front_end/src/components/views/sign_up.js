@@ -44,7 +44,7 @@ class SignUp extends React.Component {
     }
     axios({
       method: "POST",
-      url: config.API_URL + "sign-up",
+      url: config.API_URL + config.API_VR + "sign-up",
       mode: "cors",
       credentials: "include",
       headers: {

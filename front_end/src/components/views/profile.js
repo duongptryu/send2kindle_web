@@ -1,6 +1,5 @@
 import React from "react";
 import { Divider, Form, Input, Button, Modal, message } from "antd";
-import { Redirect } from "react-router";
 import axios from "axios";
 import config from "../../config";
 
@@ -50,7 +49,7 @@ class Profile extends React.Component {
     }
     axios({
       method: "POST",
-      url: config.API_URL + "user/update-kindle-mail",
+      url: config.API_URL + config.API_VR + "user/update-kindle-mail",
       mode: "cors",
       credentials: "include",
       headers: {
@@ -96,7 +95,7 @@ class Profile extends React.Component {
     }
     axios({
       method: "POST",
-      url: config.API_URL + "user/update-password",
+      url: config.API_URL + config.API_VR + "user/update-password",
       mode: "cors",
       credentials: "include",
       headers: {
